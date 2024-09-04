@@ -1,4 +1,9 @@
 <div class="main-layout-container">
-    <app-sidebar class="sidebar" ></app-sidebar>
-    <app-header class="header"></app-header>
+  <app-sidebar class="sidebar"></app-sidebar>
+  <div class="right-container">
+    <app-header></app-header>
+    <main class="content-container">
+            <router-outlet ></router-outlet>
+    </main>
+  </div>
 </div>
