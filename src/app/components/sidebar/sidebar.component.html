@@ -1,0 +1,40 @@
+<nav class="sidebar-container" [ngClass]="{ closed: !isOpen }">
+  <div class="header-sidebar-container">
+    <div class="logo-container">
+      <img src="logo.png" alt="logo" />
+      <p>Educraft</p>
+    </div>
+    <mat-icon
+      class="close-container"
+      aria-hidden="false"
+      aria-label="Example home icon"
+      fontIcon="close"
+      (click)="toggleSidebar()"
+    ></mat-icon>
+  </div>
+  <div class="header-sidebar-off">
+    <div class="icon-menu" (click)="toggleSidebar()">
+      <mat-icon
+        class="close-container"
+        aria-hidden="false"
+        aria-label="Example home icon"
+        fontIcon="menu"
+      ></mat-icon>
+    </div>
+  </div>
+  <div class="nav-container">
+    <ng-container class="nav-container">
+      <div class="menu-link-container" *ngFor="let item of menuItems">
+        <div class="icon-container">
+          <mat-icon
+            class="close-container"
+            aria-hidden="false"
+            aria-label="Example home icon"
+            [fontIcon]="item.icon"
+          ></mat-icon>
+        </div>
+        <h3 class="">{{ item.label }}</h3>
+      </div>
+    </ng-container>
+  </div>
+</nav>
